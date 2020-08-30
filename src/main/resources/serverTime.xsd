@@ -1,0 +1,29 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://pavlovaleksei.github.io"
+           targetNamespace="https://pavlovaleksei.github.io" elementFormDefault="qualified">
+
+    <xs:element name="getServerTimeRequest">
+        <xs:complexType>
+            <xs:sequence>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getServerTimeResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="serverTime" type="tns:serverTime"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="serverTime">
+        <xs:sequence>
+            <xs:element name="time" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+
+
+</xs:schema>
