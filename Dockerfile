@@ -1,9 +1,7 @@
 FROM maven:3.5.2-jdk-8-alpine as build-stage
 WORKDIR /app
-#ADD id_rsa ./
 RUN apk update && apk upgrade && \
     apk add --no-cache bash git openssh
-    #RUN mkdir ~/.ssh && ssh-keyscan -t rsa gitbranch.ru >> ~/.ssh/known_hosts && ssh-agent bash -c 'ssh-add ./id_rsa; git clone git@gitbranch.ru:alfatell.ru/contact-center.git'
     COPY . ./
     RUN mvn clean
     RUN mvn package spring-boot:repackage
