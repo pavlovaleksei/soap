@@ -11,7 +11,7 @@
 	<groupId>com.pavlov</groupId>
 	<artifactId>soap</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>soap</name>
 	<description>SOAP project</description>
 

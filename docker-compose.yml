@@ -1,0 +1,16 @@
+version: '3.2'
+
+services:
+
+  soap-backend:
+    image: soap-backend:lates
+    build: ./
+    container_name: soap-backend
+
+    volumes:
+      - ./soap-backend:/opt/tomcat/soap-service/
+    devices:
+      - /dev/snd:/dev/snd
+      - /dev/dri:/dev/dri
+    environment:
+      - TZ=Europe/Saratov
